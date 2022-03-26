@@ -1,0 +1,19 @@
+name: Dice
+version: '${version}'
+main: com.github.majisyou.dice.Dice
+api-version: 1.18
+authors: [ majjisyou ]
+description: minecerft-dice
+
+commands:
+  setdice:
+    description: ダイスコマンド
+    usage: コマンド失敗
+
+  setdicetest:
+    description: ダイステスト
+    usage: コマンド失敗
+
+  setc_lo:
+    description: チンチロリンをするコマンド
+    usage: コマンド失敗

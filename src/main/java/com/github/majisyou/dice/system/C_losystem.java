@@ -2,38 +2,33 @@ package com.github.majisyou.dice.system;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.List;
+
 public class C_losystem {
-//    public static String c_losmain(int[] args){
-//        if(!(args.length==3)){
-//            System.out.println("引数が多い。3要素の配列を求める");
-//        }else{
-//            int a=args[0];
-//            int b=args[1];
-//            int c=args[2];
-//
-//            int total=a+b+c;
-//            if(a == b && a == c){if(a == 1)  return "ピンゾロ"; else return a+"のゾロ目";}
-//            else if(a == b || a == c || b==c)  {
-//                String yaku;
-//                String x;
-//                String y;
-//
-//                if(a==b){
-//                    x = Integer.valueOf(c).toString();
-//                    y = Integer.valueOf(a).toString();
-//                }else if(a==c){
-//                    x = Integer.valueOf(b).toString();
-//                    y = Integer.valueOf(a).toString();
-//                }else{
-//                    x = Integer.valueOf(a).toString();
-//                    y = Integer.valueOf(b).toString();
-//                }
-//                yaku=y+"の"+x;
-//                return yaku;}
-//            else if(total==15) return "四五六";
-//            else if(total==6)  return "一二三";
-//            else return "役無し";
-//        }
-//        return "c_los";
-//    }
+    public static String c_losmain(List<Integer> list){
+        if(!(list.size()==3)) {
+            System.out.println("引数が多い。3要素の配列を求める");
+            return "c_los";
+        }
+
+        int firstSurface = list.get(0);
+        int secondSurface = list.get(1);
+        int thirdSurface = list.get(2);
+
+        int total = firstSurface + secondSurface + thirdSurface;
+
+
+        if (firstSurface == secondSurface && firstSurface == thirdSurface && firstSurface == 1) return "ピンゾロ";
+        if (firstSurface == secondSurface && firstSurface == thirdSurface) return firstSurface + "のゾロ目";
+
+        //2面が等しいとき
+        if (firstSurface == secondSurface) return Integer.valueOf(firstSurface).toString() + "の" + Integer.valueOf(thirdSurface).toString();
+        if (firstSurface == thirdSurface) return Integer.valueOf(firstSurface).toString() + "の" + Integer.valueOf(secondSurface).toString();
+        if (secondSurface == thirdSurface) return Integer.valueOf(secondSurface).toString() + "の" + Integer.valueOf(firstSurface).toString();
+
+        if (total == 15) return "四五六";
+        if (total == 6) return "一二三";
+        return "役無し";
+    }
+
 }

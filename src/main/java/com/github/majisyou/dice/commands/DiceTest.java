@@ -8,7 +8,7 @@ import org.jetbrains.annotations.NotNull;
 public class DiceTest implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
-        sender.sendMessage("diceプラグインは読み込んでるよ");
+        sender.sendMessage("diceプラグインは読み込んでるよ");//プラグインが使えるかの確認
         return true;
     }
 }

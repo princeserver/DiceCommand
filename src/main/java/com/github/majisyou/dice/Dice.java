@@ -8,7 +8,7 @@ import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Dice extends JavaPlugin {
-    private static Plugin plugin;
+    private static Plugin plugin;//ここは相変わらず何を意味しているかわからん
 
     @Override
     public void onEnable() {
@@ -17,12 +17,6 @@ public final class Dice extends JavaPlugin {
         getCommand("setdicetest").setExecutor(new DiceTest());
 //        getCommand("setc_lo").setExecutor(new C_locommand());
 
-
-//        //ここは定型文
-//        // config.ymlが存在しないが会いはファイルに出力
-//        saveDefaultConfig();
-//        //config.ymlを読み込む
-//        FileConfiguration config = getConfig();
     }
 
     @Override

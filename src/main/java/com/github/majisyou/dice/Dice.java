@@ -13,7 +13,7 @@ public final class Dice extends JavaPlugin {
         getLogger().info("Diceプラグインジェネレート");
         getCommand("setdice").setExecutor(new DiceCommand());
         getCommand("setdicetest").setExecutor(new DiceTest());
-//        getCommand("setc_lo").setExecutor(new C_locommand());
+        getCommand("setc_lo").setExecutor(new C_locommand());
     }
 
     @Override

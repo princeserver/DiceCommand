@@ -2,7 +2,7 @@ name: Dice
 version: '${version}'
 main: com.github.majisyou.dice.Dice
 api-version: 1.18
-authors: [ majjisyou ]
+authors: [ majisyou ]
 description: minecerft-dice
 
 commands:
@@ -13,6 +13,7 @@ commands:
   setdicetest:
     description: ダイステスト
     usage: コマンド失敗
+    permission: dice_op
 
   setc_lo:
     description: チンチロリンをするコマンド

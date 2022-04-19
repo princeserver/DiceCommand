@@ -1,0 +1,7 @@
+DiceItem:
+  ItemType: STRUCTURE_BLOCK
+  displayname: プリンスダイス
+  customModelData: 1
+  Lore:
+    - 6面ダイス
+

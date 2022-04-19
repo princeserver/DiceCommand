@@ -19,3 +19,8 @@ commands:
     description: チンチロリンをするコマンド
     usage: コマンド失敗
     permission: dice_master
+
+  give_dice:
+    description: プリンスダイスをもらえるコマンド
+    usage: コマンド失敗
+    permission: dice_op

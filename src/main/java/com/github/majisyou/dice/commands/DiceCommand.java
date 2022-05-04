@@ -41,7 +41,7 @@ public class DiceCommand implements CommandExecutor {
                 return true;
             }
 
-            if(!(args[1].chars().allMatch(Character::isDigit) && args[1].chars().allMatch(Character::isDigit))){
+            if(!(args[1].chars().allMatch(Character::isDigit) && args[2].chars().allMatch(Character::isDigit))){
                 sender.sendMessage(ChatColor.RED+"§a 引数が間違っています。");
                 sender.sendMessage("第2,3引数には数値が必要です");
                 return true;
@@ -52,10 +52,11 @@ public class DiceCommand implements CommandExecutor {
                 number = Byte.parseByte(args[1]); //サイコロの面の数
             }catch (Exception e){
                 sender.sendMessage("引数1,2は128未満にしてください");
+                return true;
             }
 
             List<Integer> result = Dicesystem.Dicemain(times,number);
-            List<Player> players = new ArrayList<Player>();
+            List<Player> players = new ArrayList<>();
             if(args.length > 2){
                 for(int i=2; i< args.length; i++){
                     if(sender.getServer().getPlayer(args[i])==null) {

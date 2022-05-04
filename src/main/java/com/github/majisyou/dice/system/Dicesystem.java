@@ -15,8 +15,13 @@ public class Dicesystem {
 
         Random randomNumber = new Random(); //ランダム変数を定義
         for (int i = 0; i < times; i++) {
-            int result = randomNumber.nextInt(surfaceCount) + 1; //結果をランダムに変更させ、
-            resultdice.add(result);             //resultdice[i回目]に代入する
+            try {
+
+                int result = randomNumber.nextInt(surfaceCount) + 1; //結果をランダムに変更させ、
+                resultdice.add(result);//resultdice[i回目]に代入する
+            }catch (Exception e){
+                resultdice.add(0);
+            }
         }
 
         return resultdice;

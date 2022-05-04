@@ -1,7 +1,9 @@
 DiceItem:
   ItemType: STRUCTURE_BLOCK
   displayname: プリンスダイス
-  customModelData: 1
+  customModelData: 1000
+  ItemTag:
+    DiceType: 6
   Lore:
-    - 6面ダイス
+    - 右クリックでダイスを振ることができるよ
 

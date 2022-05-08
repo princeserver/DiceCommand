@@ -43,7 +43,12 @@ public class DiceCommand implements CommandExecutor {
 
             if(!(args[1].chars().allMatch(Character::isDigit) && args[0].chars().allMatch(Character::isDigit))){
                 sender.sendMessage(ChatColor.RED+"§a 引数が間違っています。");
-                sender.sendMessage("第2,3引数には数値が必要です");
+                sender.sendMessage("第1,2引数には数値が必要です");
+                return true;
+            }
+
+            if(args.length<22){
+                sender.sendMessage(ChatColor.RED+"追加できるプレイヤーは20人までです");
                 return true;
             }
 

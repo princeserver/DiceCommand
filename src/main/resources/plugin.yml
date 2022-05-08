@@ -9,6 +9,7 @@ commands:
   setdice:
     description: ダイスコマンド
     usage: コマンド失敗
+    permission: dice_user
 
   setdicetest:
     description: ダイステスト
@@ -24,3 +25,8 @@ commands:
     description: プリンスダイスをもらえるコマンド
     usage: コマンド失敗
     permission: dice_op
+
+permissions:
+  dice_user:
+    description: default
+    default: true
